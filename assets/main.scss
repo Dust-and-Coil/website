@@ -204,3 +204,22 @@ blockquote {
 @media screen and (max-width: 600px) {
   .artpair { grid-template-columns: 1fr; }
 }
+
+// Icon-only social links (see _includes/social.html) sit in a row, not a column.
+.social-media-list {
+  display: flex;
+  gap: 14px;
+
+  li {
+    padding: 0;
+    line-height: 0;
+  }
+
+  .svg-icon {
+    width: 20px;
+    height: 20px;
+    fill: $grey-color-dark;
+  }
+
+  a:hover .svg-icon { fill: $text-color; }
+}

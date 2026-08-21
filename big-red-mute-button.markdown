@@ -15,7 +15,6 @@ feature.</p>
 <span class="tag tag--red">Free</span>
 <span class="tag">Anagram</span>
 <span class="tag">Mono &amp; stereo</span>
-<span class="tag">Open source</span>
 
 <figure class="artpair">
   <div>
@@ -77,7 +76,7 @@ any buffer size. Roughly ten lines of arithmetic do the actual work.
 
 ## Price
 
-Free, and free of any license gate — install it and it runs.
+Free. No license key, no activation, no trial period — install it and it runs.
 
 It exists partly because a good mute is genuinely worth having, and partly as an
 honest first pass through the whole Anagram vendor pipeline: build, on-device
@@ -89,8 +88,5 @@ with one knob.
 Built, installed, and running on real hardware. It is finishing device testing and
 the Marketplace submission now — this page will link the download the day it is
 listed.
-
-Source is published under the ISC license at
-[github.com/{{ site.github_username }}/big-red-button](https://github.com/{{ site.github_username }}/big-red-button).
 
 [Ask to be told when it ships →]({{ '/#get-in-touch' | relative_url }})

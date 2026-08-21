@@ -1,0 +1,14 @@
+{%- comment -%}
+  Overrides minima 2.5.2's social.html. Icons only — the theme's version prints
+  the bare account name next to each icon, which we don't want. aria-label keeps
+  the links named for screen readers now that there's no visible text.
+{%- endcomment -%}
+<ul class="social-media-list">
+  {%- if site.facebook_username -%}
+  <li>
+    <a href="https://www.facebook.com/{{ site.facebook_username | cgi_escape | escape }}" aria-label="Dust &amp; Coil on Facebook">
+      <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use></svg>
+    </a>
+  </li>
+  {%- endif -%}
+</ul>

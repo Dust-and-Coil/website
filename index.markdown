@@ -29,8 +29,7 @@ footswitch, instant click-free silence. Free.
 <span class="tag">Free</span> <span class="tag">Anagram</span>
 
 More is in progress: freeze/sustain, resonance shaping, and the upright-voicing
-chain. Watch the [GitHub org](https://github.com/{{ site.github_username }}) or
-write below if you'd like to hear when something lands.
+chain. Write below if you'd like to hear when something lands.
 
 ---
 
@@ -42,7 +41,7 @@ program, which means the plugins here are built against the real device, tested 
 real hardware, and shipped through the Anagram Marketplace.
 
 The house style is small tools that do one thing exactly, with controls a player
-can hear working. Source for the free plugins is public.
+can hear working.
 
 ---
 

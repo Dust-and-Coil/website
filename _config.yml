@@ -7,20 +7,16 @@ description: >-
   sound like an upright bass.
 baseurl: "/website" # this repo publishes to dust-and-coil.github.io/website
 url: "https://dust-and-coil.github.io"
-github_username: Dust-and-Coil
+facebook_username: dust.and.coil
 
-# Contact form backend. Replace with the form ID from your Formspree account
-# (https://formspree.io) — until then the form posts nowhere useful.
-formspree_id: "YOUR_FORM_ID"
+# Contact form backend: the form ID from the Formspree account
+# (https://formspree.io). The full endpoint is built in index.markdown.
+formspree_id: "xbgrwqgy"
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
-minima:
-  social_links:
-    github: Dust-and-Coil
 
 exclude:
   - Gemfile
