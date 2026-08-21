@@ -56,9 +56,9 @@ can hear working.
 
 ## Get in touch
 
-<span class="kicker">Beta testing · bug reports · feature requests</span>
+<span class="kicker">Ideas · bug reports · questions</span>
 
-Upright and electric players who want to try things early are especially welcome.
+Upright and electric players who have feature requests are especially welcome.
 
 <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
   <label for="name">Name</label>
