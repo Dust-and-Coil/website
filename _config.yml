@@ -5,8 +5,8 @@ description: >-
   Dust & Coil Audio Laboratories — effects for bass players, built in Colorado.
   Plugins for the Darkglass Anagram, with a focus on making an upright bass
   sound like an upright bass.
-baseurl: "/website" # this repo publishes to dust-and-coil.github.io/website
-url: "https://dust-and-coil.github.io"
+baseurl: "" # this repo publishes to dust-and-coil.github.io/website
+url: "https://dustandcoil.com"
 facebook_username: dust.and.coil
 
 # Contact form backend: the form ID from the Formspree account
