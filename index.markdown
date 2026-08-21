@@ -35,10 +35,19 @@ chain. Write below if you'd like to hear when something lands.
 
 ## About
 
-Dust &amp; Coil is a one-person shop in Colorado, run by a career software
-engineer who plays bass. It is a third-party vendor in the Darkglass Anagram
-program, which means the plugins here are built against the real device, tested on
-real hardware, and shipped through the Anagram Marketplace.
+Dust &amp; Coil is a three-person joint venture: a career software engineer, a
+double bass luthier, and a professional jazz bassist.
+
+That combination is the whole idea. The luthier knows how a bass actually makes
+sound — where the energy goes, what the top plate and the air inside the body do
+to a note before it ever reaches a microphone. The bassist knows what a bass is
+supposed to sound like on a stage, and will say plainly when something is close
+but wrong. The engineer builds it. Guessing at any one of those three from the
+outside is how most plugins end up technically impressive and musically useless.
+
+We're a third-party vendor in the Darkglass Anagram program, which means the
+plugins here are built against the real device, tested on real hardware, and
+shipped through the Anagram Marketplace.
 
 The house style is small tools that do one thing exactly, with controls a player
 can hear working.
