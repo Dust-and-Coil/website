@@ -83,10 +83,9 @@ honest first pass through the whole Anagram vendor pipeline: build, on-device
 testing, artwork, metadata, submission, updates. Better to learn that on a plugin
 with one knob.
 
-## Availability
+## Get it
 
-Built, installed, and running on real hardware. It is finishing device testing and
-the Marketplace submission now — this page will link the download the day it is
-listed.
+Out now on the Anagram Marketplace, in Utilities. Add it to your library and it
+installs to the pedal.
 
-[Ask to be told when it ships →]({{ '/#get-in-touch' | relative_url }})
+[Big Red Mute Button on the Anagram Marketplace →](https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874)
