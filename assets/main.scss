@@ -1,0 +1,206 @@
+---
+---
+
+// Palette: warm near-black, bone text, one red for the one thing that is red.
+$base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$base-font-size:   17px;
+$base-line-height: 1.65;
+$spacing-unit:     32px;
+
+$text-color:       #e7e5e4;
+$background-color: #0c0a09;
+$brand-color:      #d4d4d4;
+
+$grey-color:       #a8a29e;
+$grey-color-light: #292524;
+$grey-color-dark:  #78716c;
+
+$content-width:    760px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@import "minima";
+
+$red: #dc2626;
+$panel: #16130f;
+$rule: #292524;
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid $rule;
+}
+
+.site-title,
+.site-title:visited {
+  color: $text-color;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .page-link,
+.site-nav .page-link:visited {
+  color: $grey-color;
+}
+
+.site-footer {
+  border-top: 1px solid $rule;
+  color: $grey-color-dark;
+}
+
+.footer-col-wrapper {
+  color: $grey-color-dark;
+}
+
+a {
+  text-decoration-color: $grey-color-dark;
+  text-underline-offset: 3px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $rule;
+  margin: $spacing-unit 0;
+}
+
+// Kicker line above a heading: SMALL CAPS, wide tracking.
+.kicker {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: $grey-color-dark;
+}
+
+.lede {
+  font-size: 21px;
+  line-height: 1.6;
+  color: #d6d3d1;
+}
+
+// Small status flag, e.g. "Free" / "In testing".
+.tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 4px 11px;
+  border: 1px solid $rule;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: $grey-color;
+}
+
+.tag--red {
+  border-color: rgba(220, 38, 38, 0.5);
+  color: #f87171;
+}
+
+.panel {
+  margin: $spacing-unit 0;
+  padding: 24px 26px;
+  border: 1px solid $rule;
+  border-radius: 14px;
+  background: $panel;
+
+  > :first-child { margin-top: 0; }
+  > :last-child  { margin-bottom: 0; }
+}
+
+// Two-up product art (engaged / bypassed).
+.artpair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: $spacing-unit 0;
+  text-align: center;
+
+  img {
+    width: 100%;
+    border-radius: 14px;
+    background: $panel;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $grey-color-dark;
+  }
+}
+
+table {
+  color: $text-color;
+
+  th, td { border-color: $rule; }
+  th     { background-color: $panel; }
+  tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+}
+
+blockquote {
+  color: $grey-color;
+  border-left-color: $rule;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+// Contact form.
+.form {
+  margin-top: $spacing-unit;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $grey-color-dark;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid $rule;
+  border-radius: 10px;
+  background: #0f0d0b;
+  color: $text-color;
+  font: inherit;
+
+  &:focus {
+    outline: none;
+    border-color: $grey-color-dark;
+  }
+}
+
+.form button {
+  padding: 12px 22px;
+  border: 1px solid $grey-color-dark;
+  border-radius: 10px;
+  background: $text-color;
+  color: #1c1917;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover { background: #fff; }
+}
+
+@media screen and (max-width: 600px) {
+  .artpair { grid-template-columns: 1fr; }
+}
