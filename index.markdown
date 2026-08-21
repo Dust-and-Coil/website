@@ -73,4 +73,6 @@ Upright and electric players who have feature requests are especially welcome.
   <button type="submit">Send</button>
 </form>
 
-Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
+<p style="margin-top: 1rem">
+    Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
+</p>
