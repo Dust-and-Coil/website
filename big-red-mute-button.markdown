@@ -15,15 +15,12 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Press once 
 <span class="tag">Anagram</span>
 <span class="tag">Mono &amp; stereo</span>
 
-<figure class="artpair">
-  <div>
-    <img src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="Big Red Mute Button engaged—lit red and muted">
-    <figcaption>Engaged — muted</figcaption>
-  </div>
-  <div>
-    <img src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
-    <figcaption>Bypassed — live</figcaption>
-  </div>
+<figure class="product-state">
+  <span class="state-swap">
+    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
+    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
+  </span>
+  <figcaption>Hover to engage</figcaption>
 </figure>
 
 Big Red Mute Button gives Anagram an immediate, dedicated mute. Assign it to the
@@ -96,6 +93,11 @@ updates.
 
 Better to learn those things on a plugin with one knob than on a physical model
 of an upright bass.
+
+<figure class="lab-photo">
+  <img src="{{ '/assets/images/mute-laboratory.webp' | relative_url }}" alt="Big Red Mute Button under development on the Dust & Coil laboratory bench">
+  <figcaption>Development apparatus. Coffee not pictured due to operational requirements.</figcaption>
+</figure>
 
 ## Price
 

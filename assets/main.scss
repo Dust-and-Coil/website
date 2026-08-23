@@ -171,6 +171,69 @@ hr {
   border-color: rgba(220, 38, 38, 0.35);
 }
 
+// Off/on product images occupy the same box. The wrapper works inside a link or
+// on its own; hyperlink behavior remains with the parent element.
+.state-swap {
+  display: grid;
+
+  img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.state-swap__on {
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+
+@media (hover: hover) {
+  .state-swap:hover .state-swap__on,
+  a:focus-visible .state-swap__on {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .state-swap__on { transition: none; }
+}
+
+.product-state {
+  max-width: 520px;
+  margin: $spacing-unit auto;
+  text-align: center;
+
+  img {
+    border-radius: 14px;
+    background: $panel;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $grey-color-dark;
+  }
+}
+
+.lab-photo {
+  margin: $spacing-unit 0;
+
+  img {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    color: $grey-color-dark;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
 // Two-up product art (engaged / bypassed).
 .artpair {
   display: grid;

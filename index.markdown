@@ -24,7 +24,10 @@ The results have been encouraging.
 ## Available now
 
 <a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
-  <img src="{{ '/assets/images/mute-laboratory.webp' | relative_url }}" alt="Big Red Mute Button under development on the Dust & Coil laboratory bench">
+  <span class="state-swap">
+    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
+    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
+  </span>
   <span class="feature__copy">
     <span class="kicker">Free · Anagram</span>
     <strong>Big Red Mute Button</strong>
@@ -38,7 +41,10 @@ The results have been encouraging.
 ## Currently under investigation
 
 <div class="feature feature--static">
-  <img src="{{ '/assets/images/hold-it.webp' | relative_url }}" alt="Dust & Coil Hold It plugin with its blue control illuminated">
+  <span class="state-swap">
+    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
+    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
+  </span>
   <span class="feature__copy">
     <span class="kicker">Coming soon</span>
     <strong>Hold It</strong>
