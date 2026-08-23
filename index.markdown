@@ -54,25 +54,6 @@ The results have been encouraging.
 
 ---
 
-## Why “Audio Laboratories”?
-
-Because “three people, several basses, an Anagram, a compiler, and a desk slowly
-turning into a laboratory bench” was difficult to fit on the plugin.
-
-The laboratory conceit is playful; the development is not. Every release is
-tested on the actual hardware, and the controls are intended to make sense while
-standing on a dark stage—not merely while reading the manual in a well-lit room.
-Dust &amp; Coil is an approved third-party vendor in the Darkglass Anagram program,
-and releases are distributed through the Anagram Marketplace.
-
-There is also a longer-running upright-bass project behind the shop. A piezo
-pickup hears the bridge from approximately zero inches away. A microphone hears
-the whole instrument. We would like the convenience of the first, with rather
-more of the sound of the second. That requires more than EQ, so it is proceeding
-one experiment at a time.
-
----
-
 ## Get in touch
 
 <span class="kicker">Ideas · bug reports · questions</span>
