@@ -7,7 +7,7 @@ layout: default
 # Useful effects. Unnecessary amounts of research.
 
 <p class="lede">Dust &amp; Coil makes plugins for the
-<a href="https://www.darkglass.com/anagram/">Darkglass Anagram</a>. We build
+<a href="https://www.darkglass.com/products/anagram">Darkglass Anagram</a>. We build
 small, opinionated tools for bass players—usually because somebody has noticed a
 problem, and the existing answer is some variation of “just work around it.”</p>
 
