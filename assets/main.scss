@@ -116,6 +116,61 @@ hr {
   > :last-child  { margin-bottom: 0; }
 }
 
+// Product feature on the home page.
+.feature {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.2fr) 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: $spacing-unit 0 18px;
+  padding: 18px;
+  border: 1px solid $rule;
+  border-radius: 14px;
+  background: $panel;
+  color: $text-color;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease;
+
+  &:visited { color: $text-color; }
+
+  &:hover {
+    border-color: $grey-color-dark;
+    transform: translateY(-1px);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.feature--static:hover {
+  border-color: $rule;
+  transform: none;
+}
+
+.feature__copy {
+  display: grid;
+  gap: 8px;
+  color: $grey-color;
+
+  strong {
+    color: $text-color;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+}
+
+.feature__more {
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.panel--red {
+  border-color: rgba(220, 38, 38, 0.35);
+}
+
 // Two-up product art (engaged / bypassed).
 .artpair {
   display: grid;
@@ -203,6 +258,7 @@ blockquote {
 
 @media screen and (max-width: 600px) {
   .artpair { grid-template-columns: 1fr; }
+  .feature { grid-template-columns: 1fr; }
 }
 
 // Icon-only social links (see _includes/social.html) sit in a row, not a column.
