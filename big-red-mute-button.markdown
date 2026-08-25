@@ -14,7 +14,6 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 
 <span class="tag tag--red">Free</span>
 <span class="tag">Anagram</span>
-<span class="tag">Mono &amp; stereo</span>
 
 <figure class="product-state">
   <span class="state-swap">
