@@ -38,7 +38,7 @@ The results have been encouraging.
 
 ---
 
-## Currently under investigation
+## Coming soon
 
 <div class="feature feature--static">
   <span class="state-swap">
