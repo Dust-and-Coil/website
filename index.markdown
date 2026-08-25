@@ -4,20 +4,6 @@ layout: default
 
 <span class="kicker">Dust &amp; Coil Audio Laboratories · Colorado</span>
 
-# Useful effects. Unnecessary amounts of research.
-
-<p class="lede">Dust &amp; Coil makes plugins for the
-<a href="https://www.darkglass.com/products/anagram">Darkglass Anagram</a>. We build
-small, opinionated tools for bass players—usually because somebody has noticed a
-problem, and the existing answer is some variation of “just work around it.”</p>
-
-We are a three-person joint venture: a double-bass luthier, a professional jazz
-bassist, and me—a career software engineer who also plays bass. I am the sole
-developer. After decades of ordinary software, audio DSP is the newer part. So I
-began with a controlled experiment: Could I make an effect that reliably produces
-no sound at all?
-
-The results have been encouraging.
 
 ---
 
@@ -51,6 +37,19 @@ The results have been encouraging.
     <span>Natural decay has been identified as incompatible with project requirements.</span>
   </span>
 </div>
+
+
+# Useful effects. Unnecessary amounts of research.
+
+<p class="lede">Dust &amp; Coil makes plugins for the
+<a href="https://www.darkglass.com/products/anagram">Darkglass Anagram</a>. We build
+small, opinionated tools for bass players—usually because somebody has noticed a
+problem, and the existing answer is some variation of “just work around it.”</p>
+
+We are a three-person joint venture: a double-bass luthier, a professional jazz
+bassist, a career software engineer who also plays bass. 
+
+
 
 ---
 
