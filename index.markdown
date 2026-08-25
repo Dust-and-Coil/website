@@ -4,53 +4,52 @@ layout: default
 
 <span class="kicker">Dust &amp; Coil Audio Laboratories · Colorado</span>
 
-# Effects for bass players.
-
-<p class="lede">Dust &amp; Coil builds audio plugins for the
-<a href="https://www.darkglass.com/anagram/">Darkglass Anagram</a>. The long project
-is a simple one: make a piezo-equipped upright bass sound like an upright bass in
-front of a good microphone.</p>
-
-A pickup under the bridge hears the *bridge* — it is close, hard, and quick. A
-microphone a few feet away hears the *room* — the body of the instrument, the air
-around it, the delay and blur that make it sound like a bass rather than a rubber
-band. Nothing about that gap is mysterious; it is a chain of solvable problems.
-Working through them, one plugin at a time, is what this shop is for.
-
-Along the way there are smaller tools worth shipping on their own — utilities that
-should have existed already. The first of those is out now.
 
 ---
 
-## Plugins
+## Available now
 
-**[Big Red Mute Button]({{ '/big-red-mute-button/' | relative_url }})** — one
-footswitch, instant click-free silence. Free.
-<span class="tag">Free</span> <span class="tag">Anagram</span>
-
-More is in progress: freeze/sustain, resonance shaping, and the upright-voicing
-chain. Write below if you'd like to hear when something lands.
+<a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
+  <span class="state-swap">
+    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
+    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
+  </span>
+  <span class="feature__copy">
+    <span class="kicker">Free · Anagram</span>
+    <strong>Big Red Mute Button</strong>
+    <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
+    <span class="feature__more">Inspect the research →</span>
+  </span>
+</a>
 
 ---
 
-## About
+## Coming soon
 
-Dust &amp; Coil is a three-person joint venture: a career software engineer, a
-double bass luthier, and a professional jazz bassist.
+<div class="feature feature--static">
+  <span class="state-swap">
+    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
+    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
+  </span>
+  <span class="feature__copy">
+    <span class="kicker">Coming soon</span>
+    <strong>Hold It</strong>
+    <span>Natural decay has been identified as incompatible with project requirements.</span>
+  </span>
+</div>
 
-That combination is the whole idea. The luthier knows how a bass actually makes
-sound — where the energy goes, what the top plate and the air inside the body do
-to a note before it ever reaches a microphone. The bassist knows what a bass is
-supposed to sound like on a stage, and will say plainly when something is close
-but wrong. The engineer builds it. Guessing at any one of those three from the
-outside is how most plugins end up technically impressive and musically useless.
 
-We're a third-party vendor in the Darkglass Anagram program, which means the
-plugins here are built against the real device, tested on real hardware, and
-shipped through the Anagram Marketplace.
+# Useful effects. Unnecessary amounts of research.
 
-The house style is small tools that do one thing exactly, with controls a player
-can hear working.
+<p class="lede">Dust &amp; Coil makes plugins for the
+<a href="https://www.darkglass.com/products/anagram">Darkglass Anagram</a>. We build
+small, opinionated tools for bass players—usually because somebody has noticed a
+problem, and the existing answer is some variation of “just work around it.”</p>
+
+We are a three-person joint venture: a double-bass luthier, a professional jazz
+bassist, a career software engineer who also plays bass. 
+
+
 
 ---
 
@@ -58,7 +57,10 @@ can hear working.
 
 <span class="kicker">Ideas · bug reports · questions</span>
 
-Upright and electric players who have feature requests are especially welcome.
+Big Red Mute Button began with Anagram owners saying they wanted a dedicated
+mute. We are listening. If there is a small problem in your signal chain that
+everyone else has told you to work around, we would especially like to hear
+about it.
 
 <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
   <label for="name">Name</label>
@@ -74,5 +76,5 @@ Upright and electric players who have feature requests are especially welcome.
 </form>
 
 <p style="margin-top: 1rem">
-    Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
+  Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
 </p>

@@ -1,19 +1,20 @@
 ---
 ---
 
-// Palette: warm near-black, bone text, one red for the one thing that is red.
+// Palette: warm drafting paper, blueprint blue, instrument-panel black, and
+// one safety red. The goal is an engineering laboratory, not a white SaaS page.
 $base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $base-font-size:   17px;
 $base-line-height: 1.65;
 $spacing-unit:     32px;
 
-$text-color:       #e7e5e4;
-$background-color: #0c0a09;
-$brand-color:      #d4d4d4;
+$text-color:       #211f1b;
+$background-color: #eee8dc;
+$brand-color:      #285b78;
 
-$grey-color:       #a8a29e;
-$grey-color-light: #292524;
-$grey-color-dark:  #78716c;
+$grey-color:       #665f55;
+$grey-color-light: #d8cfc0;
+$grey-color-dark:  #7c7265;
 
 $content-width:    760px;
 $on-palm:          600px;
@@ -21,9 +22,11 @@ $on-laptop:        800px;
 
 @import "minima";
 
-$red: #dc2626;
-$panel: #16130f;
-$rule: #292524;
+$red: #ae2b24;
+$blue: #285b78;
+$panel: #e2dacd;
+$paper: #f7f2e9;
+$rule: #b9ae9d;
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -37,13 +40,47 @@ h1, h2, h3 {
 .site-header {
   border-top: none;
   border-bottom: 1px solid $rule;
+  background: #e7dfd2;
 }
 
 .site-title,
 .site-title:visited {
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
   color: $text-color;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.wordmark {
+  display: block;
+  width: auto;
+  opacity: 0.92;
+}
+
+.wordmark--header {
+  height: 31px;
+}
+
+.wordmark--footer {
+  height: 27px;
+}
+
+.footer-wordmark {
+  display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .site-nav .page-link,
@@ -54,6 +91,7 @@ h1, h2, h3 {
 .site-footer {
   border-top: 1px solid $rule;
   color: $grey-color-dark;
+  background: #e7dfd2;
 }
 
 .footer-col-wrapper {
@@ -84,7 +122,7 @@ hr {
 .lede {
   font-size: 21px;
   line-height: 1.6;
-  color: #d6d3d1;
+  color: #3f3a33;
 }
 
 // Small status flag, e.g. "Free" / "In testing".
@@ -101,8 +139,8 @@ hr {
 }
 
 .tag--red {
-  border-color: rgba(220, 38, 38, 0.5);
-  color: #f87171;
+  border-color: rgba(174, 43, 36, 0.5);
+  color: $red;
 }
 
 .panel {
@@ -114,6 +152,124 @@ hr {
 
   > :first-child { margin-top: 0; }
   > :last-child  { margin-bottom: 0; }
+}
+
+// Product feature on the home page.
+.feature {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.2fr) 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: $spacing-unit 0 18px;
+  padding: 18px;
+  border: 1px solid $rule;
+  border-radius: 14px;
+  background: $panel;
+  color: $text-color;
+  text-decoration: none;
+  transition: border-color 120ms ease, transform 120ms ease;
+
+  &:visited { color: $text-color; }
+
+  &:hover {
+    border-color: $grey-color-dark;
+    transform: translateY(-1px);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.feature--static:hover {
+  border-color: $rule;
+  transform: none;
+}
+
+.feature__copy {
+  display: grid;
+  gap: 8px;
+  color: $grey-color;
+
+  strong {
+    color: $text-color;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+}
+
+.feature__more {
+  color: $red;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.panel--red {
+  border-color: rgba(174, 43, 36, 0.4);
+}
+
+// Off/on product images occupy the same box. The wrapper works inside a link or
+// on its own; hyperlink behavior remains with the parent element.
+.state-swap {
+  display: grid;
+
+  img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.state-swap__on {
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+
+@media (hover: hover) {
+  .state-swap:hover .state-swap__on,
+  a:focus-visible .state-swap__on {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .state-swap__on { transition: none; }
+}
+
+.product-state {
+  max-width: 520px;
+  margin: $spacing-unit auto;
+  text-align: center;
+
+  img {
+    border-radius: 14px;
+    background: $panel;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $grey-color-dark;
+  }
+}
+
+.lab-photo {
+  margin: $spacing-unit 0;
+
+  img {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    color: $grey-color-dark;
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 // Two-up product art (engaged / bypassed).
@@ -144,7 +300,7 @@ table {
 
   th, td { border-color: $rule; }
   th     { background-color: $panel; }
-  tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+  tr:nth-child(even) { background-color: rgba(40, 91, 120, 0.035); }
 }
 
 blockquote {
@@ -175,22 +331,23 @@ blockquote {
   padding: 12px 14px;
   border: 1px solid $rule;
   border-radius: 10px;
-  background: #0f0d0b;
+  background: $paper;
   color: $text-color;
   font: inherit;
 
   &:focus {
     outline: none;
-    border-color: $grey-color-dark;
+    border-color: $blue;
+    box-shadow: 0 0 0 2px rgba(40, 91, 120, 0.12);
   }
 }
 
 .form button {
   padding: 12px 22px;
-  border: 1px solid $grey-color-dark;
+  border: 1px solid $blue;
   border-radius: 10px;
-  background: $text-color;
-  color: #1c1917;
+  background: $blue;
+  color: #fff;
   font: inherit;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -198,11 +355,12 @@ blockquote {
   font-size: 13px;
   cursor: pointer;
 
-  &:hover { background: #fff; }
+  &:hover { background: #1d4863; }
 }
 
 @media screen and (max-width: 600px) {
   .artpair { grid-template-columns: 1fr; }
+  .feature { grid-template-columns: 1fr; }
 }
 
 // Icon-only social links (see _includes/social.html) sit in a row, not a column.
@@ -221,5 +379,5 @@ blockquote {
     fill: $grey-color-dark;
   }
 
-  a:hover .svg-icon { fill: $text-color; }
+  a:hover .svg-icon { fill: $blue; }
 }
