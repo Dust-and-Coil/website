@@ -324,6 +324,10 @@ hr {
 }
 
 @media (hover: hover) {
+  // Homepage cards: swap when the pointer is anywhere on the panel link.
+  // Product pages: still swap when hovering the art itself (not wrapped in a).
+  .feature:hover .state-swap__on,
+  a:hover .state-swap__on,
   .state-swap:hover .state-swap__on,
   a:focus-visible .state-swap__on {
     opacity: 1;
@@ -332,6 +336,8 @@ hr {
 
 // Touch / no-hover: brief press reveals the engaged state.
 @media (hover: none) {
+  .feature:active .state-swap__on,
+  a:active .state-swap__on,
   .state-swap:active .state-swap__on {
     opacity: 1;
   }
