@@ -26,7 +26,7 @@ layout: default
 
 ## Coming soon
 
-<div class="feature feature--static">
+<a class="feature" href="{{ '/hold-it/' | relative_url }}">
   <span class="state-swap">
     <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
     <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
@@ -35,8 +35,9 @@ layout: default
     <span class="kicker">Coming soon</span>
     <strong>Hold It</strong>
     <span>Natural decay has been identified as incompatible with project requirements.</span>
+    <span class="feature__more">Inspect the research →</span>
   </span>
-</div>
+</a>
 
 
 # Useful effects. Unnecessary amounts of research.
