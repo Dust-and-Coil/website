@@ -239,7 +239,7 @@ hr {
   color: $text-color;
   text-decoration: none;
   text-align: left;
-  transition: border-color 120ms ease, transform 120ms ease;
+  transition: border-color 120ms ease;
 
   &:visited { color: $text-color; }
 
@@ -247,7 +247,6 @@ hr {
   &:focus {
     text-decoration: none;
     border-color: $grey-color-dark;
-    transform: translateY(-1px);
   }
 
   .state-swap {
@@ -278,7 +277,6 @@ hr {
 
 .feature--static:hover {
   border-color: $rule;
-  transform: none;
 }
 
 .feature__copy {
@@ -346,10 +344,6 @@ hr {
 @media (prefers-reduced-motion: reduce) {
   .state-swap__on { transition: none; }
   .feature { transition: none; }
-
-  .feature:hover {
-    transform: none;
-  }
 }
 
 .product-state {
