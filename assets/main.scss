@@ -208,9 +208,10 @@ hr {
   }
 
   .state-swap {
-    // Fixed width so BRMB (square) and Hold It (portrait) share the same
-    // column; neither can expand from intrinsic image size.
+    // Fixed square box so BRMB and Hold It share the same display size,
+    // regardless of their intrinsic aspect ratios.
     width: 120px;
+    height: 120px;
     max-width: 120px;
     min-width: 0;
     justify-self: start;
@@ -222,11 +223,12 @@ hr {
     min-width: 0;
   }
 
-  img {
+  .state-swap img {
     display: block;
-    width: 100%;
+    width: 120px;
+    height: 120px;
     max-width: 100%;
-    height: auto;
+    object-fit: contain;
     border-radius: 10px;
   }
 }
@@ -441,13 +443,14 @@ blockquote {
   .feature-row { grid-template-columns: 1fr; }
 
   .feature {
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 120px minmax(0, 1fr);
     gap: 12px;
   }
 
   .feature .state-swap {
-    width: 96px;
-    max-width: 96px;
+    width: 120px;
+    height: 120px;
+    max-width: 120px;
   }
 
   .product-state {

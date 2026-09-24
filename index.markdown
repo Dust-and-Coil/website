@@ -13,8 +13,8 @@ layout: default
     <div class="feature-list">
     <a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
       <span class="state-swap">
-        <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="364" height="364" alt="Big Red Mute Button bypassed—dimmed with signal live">
-        <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
+        <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="120" height="120" alt="Big Red Mute Button bypassed—dimmed with signal live">
+        <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
       </span>
       <span class="feature__copy">
         <span class="kicker">Free · Anagram</span>
@@ -31,8 +31,8 @@ layout: default
     <div class="feature-list">
     <a class="feature" href="{{ '/plugins/hold-it/' | relative_url }}">
       <span class="state-swap">
-        <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="364" height="427" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
-        <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="364" height="427" alt="" aria-hidden="true">
+        <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="120" height="120" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
+        <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
       </span>
       <span class="feature__copy">
         <span class="kicker">Coming soon</span>
