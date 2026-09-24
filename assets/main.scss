@@ -16,9 +16,9 @@ $grey-color:       #665f55;
 $grey-color-light: #d8cfc0;
 $grey-color-dark:  #7c7265;
 
-$content-width:    760px;
+$content-width:    960px;
 $on-palm:          600px;
-$on-laptop:        800px;
+$on-laptop:        1000px;
 
 @import "minima";
 
@@ -154,19 +154,44 @@ hr {
   > :last-child  { margin-bottom: 0; }
 }
 
+// Two plugin cards sit side by side on wide viewports.
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  margin: $spacing-unit 0 18px;
+}
+
+.feature-row__col {
+  min-width: 0;
+
+  .section-label {
+    margin-top: 0;
+  }
+
+  .feature-list,
+  .feature {
+    height: 100%;
+  }
+}
+
 // Product feature on the home page.
 .feature {
   display: grid;
-  grid-template-columns: minmax(120px, 0.6fr) 1fr;
-  gap: 24px;
-  align-items: center;
-  margin: $spacing-unit 0 18px;
-  padding: 18px;
+  // Image on top, copy below — cards are already half-width in .feature-row.
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+  justify-items: center;
+  margin: 0;
+  padding: 16px;
   border: 1px solid $rule;
   border-radius: 14px;
   background: $panel;
   color: $text-color;
   text-decoration: none;
+  text-align: center;
   transition: border-color 120ms ease, transform 120ms ease;
 
   &:visited { color: $text-color; }
@@ -177,13 +202,22 @@ hr {
   }
 
   .state-swap {
-    max-width: 260px;
-    width: 100%;
+    // Half of prior ~full-column display; min-width:0 so intrinsic PNG/WebP
+    // size cannot blow past the cap (Hold It was escaping max-width).
+    max-width: 160px;
+    width: 50%;
+    min-width: 0;
     justify-self: center;
+  }
+
+  .feature__copy {
+    justify-items: center;
   }
 
   img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
   }
 }
@@ -219,11 +253,14 @@ hr {
 // on its own; hyperlink behavior remains with the parent element.
 .state-swap {
   display: grid;
+  min-width: 0;
 
   img {
     grid-area: 1 / 1;
     width: 100%;
+    max-width: 100%;
     height: auto;
+    min-width: 0;
   }
 }
 
@@ -256,11 +293,23 @@ hr {
 }
 
 .product-state {
+  // Half of the previous 520px product-art cap; min-width:0 so large WebPs shrink.
   max-width: 260px;
+  width: 50%;
+  min-width: 0;
   margin: $spacing-unit auto;
   text-align: center;
 
+  .state-swap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
   img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 14px;
     background: $panel;
   }
@@ -378,7 +427,13 @@ blockquote {
 
 @media screen and (max-width: 600px) {
   .artpair { grid-template-columns: 1fr; }
+  .feature-row { grid-template-columns: 1fr; }
   .feature { grid-template-columns: 1fr; }
+
+  .product-state {
+    width: 60%;
+    max-width: 220px;
+  }
 }
 
 

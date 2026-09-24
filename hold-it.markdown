@@ -17,8 +17,8 @@ description: A coming-soon plugin for the Darkglass Anagram. When the note shoul
 
 <figure class="product-state">
   <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed">
-    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
+    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="364" height="427" alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed">
+    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="364" height="427" alt="" aria-hidden="true">
   </span>
 </figure>
 
