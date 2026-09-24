@@ -4,9 +4,11 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
+# Serialize every deploy/cleanup that mutates website-previews/main.
+# Do not cancel-in-progress: a push on PR A must not abort PR B's publish.
 concurrency:
-  group: preview-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  group: website-previews
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -36,17 +38,32 @@ jobs:
           # Static hosting only — do not re-run Jekyll on the preview repo.
           touch _site/.nojekyll
 
+      # Replace pr-<n>/ wholesale so deleted/renamed pages do not linger.
+      # keep_files-style sibling preservation: only this PR's directory is removed.
       - name: Publish to website-previews
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.PREVIEW_DEPLOY_TOKEN }}
-          external_repository: Dust-and-Coil/website-previews
-          publish_branch: main
-          publish_dir: ./_site
-          destination_dir: pr-${{ github.event.number }}
-          keep_files: true
-          allow_empty_commit: true
-          commit_message: "Preview for website PR #${{ github.event.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.PREVIEW_DEPLOY_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch main \
+            "https://x-access-token:${GH_TOKEN}@github.com/Dust-and-Coil/website-previews.git" \
+            preview-host
+          rm -rf "preview-host/pr-${PR_NUMBER}"
+          mkdir -p "preview-host/pr-${PR_NUMBER}"
+          cp -a _site/. "preview-host/pr-${PR_NUMBER}/"
+          rm -f "preview-host/pr-${PR_NUMBER}/CNAME"
+          touch "preview-host/pr-${PR_NUMBER}/.nojekyll"
+          touch preview-host/.nojekyll
+          git -C preview-host config user.name "github-actions[bot]"
+          git -C preview-host config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C preview-host add -A
+          if git -C preview-host diff --cached --quiet; then
+            echo "No preview changes"
+            exit 0
+          fi
+          git -C preview-host commit -m "Preview for website PR #${PR_NUMBER}"
+          git -C preview-host push origin main
 
       - name: Comment preview URL
         uses: actions/github-script@v7
