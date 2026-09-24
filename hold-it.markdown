@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hold It
-permalink: /hold-it/
+permalink: /plugins/hold-it/
 description: A coming-soon plugin for the Darkglass Anagram. When the note should keep going and the instrument has other plans.
 ---
 

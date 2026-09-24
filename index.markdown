@@ -26,7 +26,7 @@ layout: default
 
 ## Coming soon
 
-<a class="feature" href="{{ '/hold-it/' | relative_url }}">
+<a class="feature" href="{{ '/plugins/hold-it/' | relative_url }}">
   <span class="state-swap">
     <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
     <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
