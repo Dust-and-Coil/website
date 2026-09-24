@@ -17,8 +17,8 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 
 <figure class="product-state">
   <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
-    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
+    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
+    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" alt="" aria-hidden="true">
   </span>
 </figure>
 

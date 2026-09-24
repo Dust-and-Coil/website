@@ -7,12 +7,13 @@ layout: default
 
 ---
 
-## Available now
+<p class="section-label">Available now</p>
 
+<div class="feature-list">
 <a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
   <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
-    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
+    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
+    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" alt="" aria-hidden="true">
   </span>
   <span class="feature__copy">
     <span class="kicker">Free · Anagram</span>
@@ -21,11 +22,13 @@ layout: default
     <span class="feature__more">Inspect the research →</span>
   </span>
 </a>
+</div>
 
 ---
 
-## Coming soon
+<p class="section-label">Coming soon</p>
 
+<div class="feature-list">
 <a class="feature" href="{{ '/plugins/hold-it/' | relative_url }}">
   <span class="state-swap">
     <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
@@ -38,6 +41,7 @@ layout: default
     <span class="feature__more">Inspect the research →</span>
   </span>
 </a>
+</div>
 
 
 # Useful effects. Unnecessary amounts of research.
@@ -64,6 +68,7 @@ everyone else has told you to work around, we would especially like to hear
 about it.
 
 <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+  <input type="hidden" name="_next" value="{{ '/thanks/' | absolute_url }}">
   <label for="name">Name</label>
   <input id="name" type="text" name="name" required>
 
