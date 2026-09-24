@@ -15,7 +15,6 @@ layout: default
         <span class="kicker">Free · Anagram</span>
         <strong>Big Red Mute Button</strong>
         <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
-        <span class="feature__more">Inspect the research →</span>
       </span>
     </a>
     </div>
@@ -33,7 +32,6 @@ layout: default
         <span class="kicker">Coming soon</span>
         <strong>Hold It</strong>
         <span>Natural decay has been identified as incompatible with project requirements.</span>
-        <span class="feature__more">Inspect the research →</span>
       </span>
     </a>
     </div>
