@@ -472,10 +472,21 @@ blockquote {
 // Icon-only social links (see _includes/social.html) sit in a row, not a column.
 .social-media-list {
   display: flex;
+  align-items: center;
   gap: 14px;
 
-  li {
+  // Override minima's stacked li + li { padding-top: 5px } so icons share a baseline.
+  li,
+  li + li {
     padding: 0;
+    margin: 0;
+    line-height: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 0;
   }
 
@@ -491,9 +502,13 @@ blockquote {
     border: 0;
   }
 
+  // 20px → 30px (+50%). Drop minima's padding-right so icon boxes match.
   .svg-icon {
-    width: 20px;
-    height: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    vertical-align: middle;
     fill: $grey-color-dark;
   }
 
