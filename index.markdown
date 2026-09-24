@@ -56,6 +56,13 @@ bassist, a career software engineer who also plays bass.
 
 
 
+
+---
+
+<p class="section-label">On Instagram</p>
+
+{% include instagram-embed.html %}
+
 ---
 
 ## Get in touch

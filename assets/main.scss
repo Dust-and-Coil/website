@@ -420,3 +420,8 @@ blockquote {
 
   a:hover .svg-icon { fill: $blue; }
 }
+
+.instagram-embed {
+  margin: $spacing-unit auto;
+  max-width: 540px;
+}
