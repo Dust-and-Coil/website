@@ -89,7 +89,3 @@ about it.
 
   <button type="submit">Send</button>
 </form>
-
-<p style="margin-top: 1rem">
-  Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
-</p>
