@@ -2,11 +2,6 @@
 layout: default
 ---
 
-<span class="kicker">Dust &amp; Coil Audio Laboratories · Colorado</span>
-
-
----
-
 <div class="feature-row">
   <div class="feature-row__col">
     <p class="section-label">Available now</p>
