@@ -1,0 +1,3 @@
+# Used for PR preview builds only (see .github/workflows/preview.yml).
+# Production builds ignore this file and keep dustandcoil.com.
+url: "https://dust-and-coil.github.io"
