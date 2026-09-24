@@ -159,31 +159,37 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: stretch;
-  margin: $spacing-unit 0 18px;
+  align-items: start;
+  margin: $spacing-unit 0 $spacing-unit;
 }
 
 .feature-row__col {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 
   .section-label {
     margin-top: 0;
+    margin-bottom: 12px;
   }
 
-  .feature-list,
-  .feature {
-    height: 100%;
+  .feature-list {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
 // Product feature on the home page.
 .feature {
   display: grid;
-  // Image on top, copy below — cards are already half-width in .feature-row.
-  grid-template-columns: 1fr;
-  gap: 14px;
-  align-items: start;
-  justify-items: center;
+  // Compact: fixed-size art on the left, copy on the right.
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  justify-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
   margin: 0;
   padding: 16px;
   border: 1px solid $rule;
@@ -191,7 +197,7 @@ hr {
   background: $panel;
   color: $text-color;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   transition: border-color 120ms ease, transform 120ms ease;
 
   &:visited { color: $text-color; }
@@ -202,19 +208,22 @@ hr {
   }
 
   .state-swap {
-    // Half of prior ~full-column display; min-width:0 so intrinsic PNG/WebP
-    // size cannot blow past the cap (Hold It was escaping max-width).
-    max-width: 160px;
-    width: 50%;
+    // Fixed width so BRMB (square) and Hold It (portrait) share the same
+    // column; neither can expand from intrinsic image size.
+    width: 120px;
+    max-width: 120px;
     min-width: 0;
-    justify-self: center;
+    justify-self: start;
   }
 
   .feature__copy {
-    justify-items: center;
+    justify-items: start;
+    text-align: left;
+    min-width: 0;
   }
 
   img {
+    display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -293,20 +302,22 @@ hr {
 }
 
 .product-state {
-  // Half of the previous 520px product-art cap; min-width:0 so large WebPs shrink.
+  // Half of the previous 520px product-art cap.
   max-width: 260px;
-  width: 50%;
+  width: 100%;
   min-width: 0;
   margin: $spacing-unit auto;
   text-align: center;
 
   .state-swap {
     width: 100%;
-    max-width: 100%;
+    max-width: 260px;
     min-width: 0;
+    margin: 0 auto;
   }
 
   img {
+    display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -428,10 +439,18 @@ blockquote {
 @media screen and (max-width: 600px) {
   .artpair { grid-template-columns: 1fr; }
   .feature-row { grid-template-columns: 1fr; }
-  .feature { grid-template-columns: 1fr; }
+
+  .feature {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .feature .state-swap {
+    width: 96px;
+    max-width: 96px;
+  }
 
   .product-state {
-    width: 60%;
     max-width: 220px;
   }
 }
