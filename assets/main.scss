@@ -98,9 +98,50 @@ h1, h2, h3 {
   color: $grey-color-dark;
 }
 
+// Content links: underlined by default; brighter blue on hover.
+// Minima defaults to underline-only-on-hover — override that.
+$link-hover: #3d8fb5;
+
 a {
-  text-decoration-color: $grey-color-dark;
+  color: $brand-color;
+  text-decoration: underline;
+  text-decoration-color: rgba($brand-color, 0.55);
   text-underline-offset: 3px;
+
+  &:visited {
+    color: darken($brand-color, 8%);
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+    text-decoration-color: $link-hover;
+  }
+}
+
+// Chrome / composite links stay undecorated (nav, wordmark, cards, icons).
+.site-title,
+.site-title:visited,
+.site-title:hover,
+.site-nav .page-link,
+.site-nav .page-link:visited,
+.site-nav .page-link:hover,
+.footer-wordmark,
+.footer-wordmark:visited,
+.footer-wordmark:hover,
+.feature,
+.feature:visited,
+.feature:hover,
+.feature:focus,
+.social-media-list a,
+.social-media-list a:visited,
+.social-media-list a:hover {
+  text-decoration: none;
+}
+
+.site-nav .page-link:hover {
+  color: $link-hover;
 }
 
 hr {
