@@ -7,35 +7,42 @@ layout: default
 
 ---
 
-## Available now
+<div class="feature-row">
+  <div class="feature-row__col">
+    <p class="section-label">Available now</p>
+    <div class="feature-list">
+    <a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
+      <span class="state-swap">
+        <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="120" height="120" alt="Big Red Mute Button bypassed—dimmed with signal live">
+        <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
+      </span>
+      <span class="feature__copy">
+        <span class="kicker">Free · Anagram</span>
+        <strong>Big Red Mute Button</strong>
+        <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
+        <span class="feature__more">Inspect the research →</span>
+      </span>
+    </a>
+    </div>
+  </div>
 
-<a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
-  <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.png' | relative_url }}" alt="Big Red Mute Button bypassed—dimmed with signal live">
-    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.png' | relative_url }}" alt="" aria-hidden="true">
-  </span>
-  <span class="feature__copy">
-    <span class="kicker">Free · Anagram</span>
-    <strong>Big Red Mute Button</strong>
-    <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
-    <span class="feature__more">Inspect the research →</span>
-  </span>
-</a>
-
----
-
-## Coming soon
-
-<div class="feature feature--static">
-  <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
-    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" alt="" aria-hidden="true">
-  </span>
-  <span class="feature__copy">
-    <span class="kicker">Coming soon</span>
-    <strong>Hold It</strong>
-    <span>Natural decay has been identified as incompatible with project requirements.</span>
-  </span>
+  <div class="feature-row__col">
+    <p class="section-label">Coming soon</p>
+    <div class="feature-list">
+    <a class="feature" href="{{ '/plugins/hold-it/' | relative_url }}">
+      <span class="state-swap">
+        <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="120" height="120" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
+        <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
+      </span>
+      <span class="feature__copy">
+        <span class="kicker">Coming soon</span>
+        <strong>Hold It</strong>
+        <span>Natural decay has been identified as incompatible with project requirements.</span>
+        <span class="feature__more">Inspect the research →</span>
+      </span>
+    </a>
+    </div>
+  </div>
 </div>
 
 
@@ -51,6 +58,13 @@ bassist, a career software engineer who also plays bass.
 
 
 
+
+---
+
+<p class="section-label">On Instagram</p>
+
+{% include instagram-embed.html %}
+
 ---
 
 ## Get in touch
@@ -63,6 +77,7 @@ everyone else has told you to work around, we would especially like to hear
 about it.
 
 <form class="form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+  <input type="hidden" name="_next" value="{{ '/thanks/' | absolute_url }}">
   <label for="name">Name</label>
   <input id="name" type="text" name="name" required>
 
@@ -74,7 +89,3 @@ about it.
 
   <button type="submit">Send</button>
 </form>
-
-<p style="margin-top: 1rem">
-  Or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> directly.
-</p>
