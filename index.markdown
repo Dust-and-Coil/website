@@ -2,11 +2,6 @@
 layout: default
 ---
 
-<span class="kicker">Dust &amp; Coil Audio Laboratories · Colorado</span>
-
-
----
-
 <div class="feature-row">
   <div class="feature-row__col">
     <p class="section-label">Available now</p>
@@ -20,7 +15,6 @@ layout: default
         <span class="kicker">Free · Anagram</span>
         <strong>Big Red Mute Button</strong>
         <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
-        <span class="feature__more">Inspect the research →</span>
       </span>
     </a>
     </div>
@@ -38,15 +32,12 @@ layout: default
         <span class="kicker">Coming soon</span>
         <strong>Hold It</strong>
         <span>Natural decay has been identified as incompatible with project requirements.</span>
-        <span class="feature__more">Inspect the research →</span>
       </span>
     </a>
     </div>
   </div>
 </div>
 
-
-# Useful effects. Unnecessary amounts of research.
 
 <p class="lede">Dust &amp; Coil makes plugins for the
 <a href="https://www.darkglass.com/products/anagram">Darkglass Anagram</a>. We build
@@ -55,8 +46,6 @@ problem, and the existing answer is some variation of “just work around it.”
 
 We are a three-person joint venture: a double-bass luthier, a professional jazz
 bassist, a career software engineer who also plays bass. 
-
-
 
 
 ---

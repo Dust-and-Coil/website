@@ -98,9 +98,54 @@ h1, h2, h3 {
   color: $grey-color-dark;
 }
 
+// Content links: underlined by default; brighter blue on hover.
+// Minima defaults to underline-only-on-hover — override that.
+$link-hover: #3d8fb5;
+
 a {
-  text-decoration-color: $grey-color-dark;
+  color: $brand-color;
+  text-decoration: underline;
+  text-decoration-color: rgba($brand-color, 0.55);
   text-underline-offset: 3px;
+
+  &:visited {
+    color: darken($brand-color, 8%);
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+    text-decoration-color: $link-hover;
+  }
+}
+
+// Chrome / composite links stay undecorated (nav, wordmark, cards, icons).
+.site-title,
+.site-title:visited,
+.site-title:hover,
+.site-nav .page-link,
+.site-nav .page-link:visited,
+.site-nav .page-link:hover,
+.footer-wordmark,
+.footer-wordmark:visited,
+.footer-wordmark:hover,
+.feature,
+.feature:visited,
+.feature:hover,
+.feature:focus,
+.product-state a,
+.product-state a:visited,
+.product-state a:hover,
+.product-state a:focus,
+.social-media-list a,
+.social-media-list a:visited,
+.social-media-list a:hover {
+  text-decoration: none;
+}
+
+.site-nav .page-link:hover {
+  color: $link-hover;
 }
 
 hr {
@@ -198,7 +243,7 @@ hr {
   color: $text-color;
   text-decoration: none;
   text-align: left;
-  transition: border-color 120ms ease, transform 120ms ease;
+  transition: border-color 120ms ease;
 
   &:visited { color: $text-color; }
 
@@ -206,7 +251,6 @@ hr {
   &:focus {
     text-decoration: none;
     border-color: $grey-color-dark;
-    transform: translateY(-1px);
   }
 
   .state-swap {
@@ -237,7 +281,6 @@ hr {
 
 .feature--static:hover {
   border-color: $rule;
-  transform: none;
 }
 
 .feature__copy {
@@ -283,6 +326,10 @@ hr {
 }
 
 @media (hover: hover) {
+  // Homepage cards: swap when the pointer is anywhere on the panel link.
+  // Product pages: still swap when hovering the art itself (not wrapped in a).
+  .feature:hover .state-swap__on,
+  a:hover .state-swap__on,
   .state-swap:hover .state-swap__on,
   a:focus-visible .state-swap__on {
     opacity: 1;
@@ -291,6 +338,8 @@ hr {
 
 // Touch / no-hover: brief press reveals the engaged state.
 @media (hover: none) {
+  .feature:active .state-swap__on,
+  a:active .state-swap__on,
   .state-swap:active .state-swap__on {
     opacity: 1;
   }
@@ -299,10 +348,6 @@ hr {
 @media (prefers-reduced-motion: reduce) {
   .state-swap__on { transition: none; }
   .feature { transition: none; }
-
-  .feature:hover {
-    transform: none;
-  }
 }
 
 .product-state {

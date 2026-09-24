@@ -2,6 +2,8 @@
 layout: default
 title: Thanks
 permalink: /thanks/
+# Formspree landing only — keep out of the header nav.
+nav_exclude: true
 ---
 
 <span class="kicker">Contact</span>
