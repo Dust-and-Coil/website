@@ -502,13 +502,14 @@ blockquote {
     border: 0;
   }
 
-  // 20px → 30px (+50%). Drop minima's padding-right so icon boxes match.
+  // 20px → 30px (+50%). viewBox on the <svg> is required so the 16×16
+  // minima glyphs actually scale; without it the box grows but the art stays 16px.
   .svg-icon {
     display: block;
     width: 30px;
     height: 30px;
     padding: 0;
-    vertical-align: middle;
+    overflow: visible;
     fill: $grey-color-dark;
   }
 
