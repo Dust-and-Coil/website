@@ -33,6 +33,8 @@ jobs:
             --config _config.yml,_config.preview.yml
           # Never publish the production CNAME into the preview host.
           rm -f _site/CNAME
+          # Static hosting only — do not re-run Jekyll on the preview repo.
+          touch _site/.nojekyll
 
       - name: Publish to website-previews
         uses: peaceiris/actions-gh-pages@v4
