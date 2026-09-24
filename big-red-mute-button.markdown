@@ -16,10 +16,12 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 <span class="tag">Anagram</span>
 
 <figure class="product-state">
-  <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="364" height="364" alt="Big Red Mute Button bypassed—dimmed with signal live">
-    <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
-  </span>
+  <a href="https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874" aria-label="Big Red Mute Button on the Anagram Marketplace">
+    <span class="state-swap">
+      <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
+      <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
+    </span>
+  </a>
 </figure>
 
 
