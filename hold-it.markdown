@@ -56,3 +56,5 @@ Coming soon. Controls, pricing, and the Anagram Marketplace listing will land he
 
 Ideas, bug reports from the field, and “please make it do X” notes are welcome on the
 [contact page]({{ '/contact/' | relative_url }}).
+
+{% endif %}
