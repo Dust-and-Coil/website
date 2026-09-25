@@ -1,0 +1,26 @@
+{%- comment -%}
+  Price label for a plugin from _data/plugins.yml.
+
+    {% include plugin-price.html plugin=plugin %}             → Free | €34.99
+    {% include plugin-price.html plugin=plugin part="note" %} → euro note, or nothing
+
+  The note only renders for non-free EUR prices.
+{%- endcomment -%}
+{%- assign p = include.plugin -%}
+{%- assign cents = p.price | default: 0 | times: 100 | round -%}
+{%- if include.part == "note" -%}
+  {%- if cents > 0 and p.currency == "EUR" -%}
+    Marketplace prices are in euros; your card converts at checkout.
+  {%- endif -%}
+{%- elsif cents == 0 -%}
+  Free
+{%- else -%}
+  {%- case p.currency -%}
+    {%- when "EUR" -%}{%- assign symbol = "€" -%}
+    {%- when "USD" -%}{%- assign symbol = "$" -%}
+    {%- else -%}{%- assign symbol = p.currency | append: " " -%}
+  {%- endcase -%}
+  {%- assign whole = cents | divided_by: 100 -%}
+  {%- assign frac = cents | modulo: 100 -%}
+  {{- symbol }}{{ whole }}.{% if frac < 10 %}0{% endif %}{{ frac -}}
+{%- endif -%}

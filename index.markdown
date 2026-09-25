@@ -2,40 +2,39 @@
 layout: default
 ---
 
-<div class="feature-row">
+{%- comment -%} A plugin is live iff its marketplace_url is filled in (see _data/plugins.yml). {%- endcomment -%}
+{%- assign live_plugins = "" | split: "" -%}
+{%- assign soon_plugins = "" | split: "" -%}
+{%- for entry in site.data.plugins -%}
+  {%- assign url = entry[1].marketplace_url | strip -%}
+  {%- if url == "" -%}
+    {%- assign soon_plugins = soon_plugins | push: entry[1] -%}
+  {%- else -%}
+    {%- assign live_plugins = live_plugins | push: entry[1] -%}
+  {%- endif -%}
+{%- endfor -%}
+<div class="feature-row{% if live_plugins.size == 0 or soon_plugins.size == 0 %} feature-row--single{% endif %}">
+{%- if live_plugins.size > 0 %}
   <div class="feature-row__col">
     <p class="section-label">Available now</p>
     <div class="feature-list">
-    <a class="feature" href="{{ '/big-red-mute-button/' | relative_url }}">
-      <span class="state-swap">
-        <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="120" height="120" alt="Big Red Mute Button bypassed—dimmed with signal live">
-        <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
-      </span>
-      <span class="feature__copy">
-        <span class="kicker">Free · Anagram</span>
-        <strong>Big Red Mute Button</strong>
-        <span>Press the big red button: your signal mutes. Press it again: your signal returns.</span>
-      </span>
-    </a>
+    {%- for plugin in live_plugins %}
+    {% include plugin-card.html plugin=plugin %}
+    {%- endfor %}
     </div>
   </div>
+{%- endif %}
+{%- if soon_plugins.size > 0 %}
 
   <div class="feature-row__col">
     <p class="section-label">Coming soon</p>
     <div class="feature-list">
-    <a class="feature" href="{{ '/plugins/hold-it/' | relative_url }}">
-      <span class="state-swap">
-        <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="120" height="120" alt="Dust & Coil Hold It plugin bypassed—blue control dimmed">
-        <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
-      </span>
-      <span class="feature__copy">
-        <span class="kicker">Coming soon</span>
-        <strong>Hold It</strong>
-        <span>Natural decay has been identified as incompatible with project requirements.</span>
-      </span>
-    </a>
+    {%- for plugin in soon_plugins %}
+    {% include plugin-card.html plugin=plugin %}
+    {%- endfor %}
     </div>
   </div>
+{%- endif %}
 </div>
 
 
