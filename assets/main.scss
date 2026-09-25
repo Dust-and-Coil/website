@@ -98,18 +98,21 @@ h1, h2, h3 {
   color: $grey-color-dark;
 }
 
-// Content links: underlined by default; brighter blue on hover.
+// Content links: underlined by default; dark green on hover for contrast.
 // Minima defaults to underline-only-on-hover — override that.
-$link-hover: #3d8fb5;
+// Resting blue is the hover green rotated to hue 210 (same saturation, a bit
+// darker): ~8.8:1 on $background-color, ~7.7:1 on panels (WCAG AAA).
+$link-color: #1d4063;
+$link-hover: #1f6b3a; // forest green: ~5.3:1 on $background-color (WCAG AA)
 
 a {
-  color: $brand-color;
+  color: $link-color;
   text-decoration: underline;
-  text-decoration-color: rgba($brand-color, 0.55);
+  text-decoration-color: rgba($link-color, 0.7);
   text-underline-offset: 3px;
 
   &:visited {
-    color: darken($brand-color, 8%);
+    color: darken($link-color, 5%);
     text-decoration: underline;
   }
 
