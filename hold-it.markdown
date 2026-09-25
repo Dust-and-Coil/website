@@ -40,4 +40,4 @@ Coming soon. Controls, pricing, and the Anagram Marketplace listing will land he
 ## Meanwhile
 
 Ideas, bug reports from the field, and “please make it do X” notes are welcome on the
-[home page]({{ '/' | relative_url }}#get-in-touch).
+[contact page]({{ '/contact/' | relative_url }}).
