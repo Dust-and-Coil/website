@@ -208,6 +208,22 @@ hr {
   margin: $spacing-unit 0 $spacing-unit;
 }
 
+// Only one column has cards (e.g. nothing is "Coming soon"): let it take the
+// full width and lay its cards out two-up, the same size as before.
+.feature-row--single {
+  grid-template-columns: 1fr;
+
+  .feature-row__col .feature-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 .feature-row__col {
   min-width: 0;
   display: flex;

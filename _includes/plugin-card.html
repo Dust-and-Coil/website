@@ -1,0 +1,15 @@
+{%- comment -%}
+  Home page card for a plugin. Usage: {% include plugin-card.html plugin=plugin %}
+{%- endcomment -%}
+{%- assign p = include.plugin -%}
+    <a class="feature" href="{{ p.page | relative_url }}">
+      <span class="state-swap">
+        <img class="state-swap__off" src="{{ p.card_image_off | relative_url }}" width="120" height="120" alt="{{ p.card_alt }}">
+        <img class="state-swap__on" src="{{ p.card_image_on | relative_url }}" width="120" height="120" alt="" aria-hidden="true">
+      </span>
+      <span class="feature__copy">
+        <span class="kicker">{% if p.status == "live" %}{% include plugin-price.html plugin=p %} · Anagram{% else %}Coming soon{% endif %}</span>
+        <strong>{{ p.name }}</strong>
+        <span>{{ p.card_blurb }}</span>
+      </span>
+    </a>
