@@ -2,8 +2,10 @@
 layout: default
 title: Big Red Mute Button
 permalink: /big-red-mute-button/
+plugin: big-red-mute-button
 description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable fade in and out.
 ---
+{%- assign plugin = site.data.plugins[page.plugin] -%}
 
 <span class="kicker">Plugin for the Darkglass Anagram</span>
 
@@ -12,17 +14,9 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 
 <p class="lede"><strong>Audiophile-approved nothingness</strong></p>
 
-<span class="tag tag--red">Free</span>
-<span class="tag">Anagram</span>
+{% include plugin-tags.html plugin=plugin %}
 
-<figure class="product-state">
-  <a href="https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874" aria-label="Big Red Mute Button on the Anagram Marketplace">
-    <span class="state-swap">
-      <img class="state-swap__off" src="{{ '/assets/images/brmb-off.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
-      <img class="state-swap__on" src="{{ '/assets/images/brmb-on.webp' | relative_url }}" width="364" height="364" alt="" aria-hidden="true">
-    </span>
-  </a>
-</figure>
+{% include plugin-art.html plugin=plugin off="/assets/images/brmb-off.webp" on="/assets/images/brmb-on.webp" width=364 height=364 alt="Big Red Mute Button bypassed—dimmed with signal live" %}
 
 
 ## Why this exists
@@ -48,10 +42,10 @@ and back in.
 
 ## Price
 
-Free.
+{% include plugin-price.html plugin=plugin %}.
 
 
 ## Get it
 
-[Available now in the Utilities section](https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874) of the Anagram Marketplace. Add it to your
+[Available now in the Utilities section]({{ plugin.marketplace_url }}) of the Anagram Marketplace. Add it to your
 library and install it on the pedal.

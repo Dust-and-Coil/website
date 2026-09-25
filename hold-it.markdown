@@ -2,8 +2,10 @@
 layout: default
 title: Hold It
 permalink: /plugins/hold-it/
+plugin: hold-it
 description: A coming-soon plugin for the Darkglass Anagram. When the note should keep going and the instrument has other plans.
 ---
+{%- assign plugin = site.data.plugins[page.plugin] -%}
 
 <span class="kicker">Plugin for the Darkglass Anagram</span>
 
@@ -12,15 +14,9 @@ description: A coming-soon plugin for the Darkglass Anagram. When the note shoul
 
 <p class="lede"><strong>Natural decay has been identified as incompatible with project requirements.</strong></p>
 
-<span class="tag">Coming soon</span>
-<span class="tag">Anagram</span>
+{% include plugin-tags.html plugin=plugin %}
 
-<figure class="product-state">
-  <span class="state-swap">
-    <img class="state-swap__off" src="{{ '/assets/images/hold-it-off.webp' | relative_url }}" width="364" height="427" alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed">
-    <img class="state-swap__on" src="{{ '/assets/images/hold-it-on.webp' | relative_url }}" width="364" height="427" alt="" aria-hidden="true">
-  </span>
-</figure>
+{% include plugin-art.html plugin=plugin off="/assets/images/hold-it-off.webp" on="/assets/images/hold-it-on.webp" width=364 height=427 alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed" %}
 
 
 ## Why this exists
@@ -32,6 +28,24 @@ The workarounds are familiar: ride the volume pedal, ride the compressor, re-att
 Hold It is for the moment when the note should keep going and the instrument has other plans.
 
 
+{% if plugin.status == "live" %}
+{% comment %}
+  TODO(launch): add a "## The controls" section here, like the BRMB page's
+  "The one control". Copy to come from the plugin team — not rendered until written.
+{% endcomment %}
+
+## Price
+
+{% include plugin-price.html plugin=plugin %}
+
+{% include plugin-price.html plugin=plugin part="note" %}
+
+## Get it
+
+{% if plugin.marketplace_url %}[Available now in the Anagram Marketplace]({{ plugin.marketplace_url }}){% else %}Available now in the Anagram Marketplace{% endif %}. Add it to your
+library and install it on the pedal.
+
+{% else %}
 ## Status
 
 Coming soon. Controls, pricing, and the Anagram Marketplace listing will land here when the plugin does.
@@ -41,3 +55,4 @@ Coming soon. Controls, pricing, and the Anagram Marketplace listing will land he
 
 Ideas, bug reports from the field, and “please make it do X” notes are welcome on the
 [home page]({{ '/' | relative_url }}#get-in-touch).
+{% endif %}

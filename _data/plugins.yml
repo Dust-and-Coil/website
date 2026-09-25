@@ -1,0 +1,44 @@
+# Plugin catalog. Product pages, the home page cards, and price labels all
+# read from this file.
+#
+# Launch day (e.g. Hold It):
+#   1. Set `status: live`.
+#   2. Paste the Anagram Marketplace link into `marketplace_url`.
+#   3. Open a PR, check the preview, merge.
+# That moves the home page card from "Coming soon" to "Available now", links
+# the product art to the Marketplace, and swaps the product page's Status /
+# Meanwhile sections for Price / Get it.
+#
+# Fields:
+#   status:          coming-soon | live
+#   price:           number; 0 renders as "Free", otherwise e.g. "€34.99"
+#   currency:        EUR (€) or USD ($)
+#   marketplace_url: only used when status is live
+#   page:            product page permalink
+#   card_*:          home page card copy and art (shown at 120×120)
+#
+# Cards appear on the home page in the order listed here.
+
+big-red-mute-button:
+  name: Big Red Mute Button
+  status: live
+  price: 0
+  currency: EUR
+  marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874
+  page: /big-red-mute-button/
+  card_blurb: "Press the big red button: your signal mutes. Press it again: your signal returns."
+  card_image_off: /assets/images/brmb-off.webp
+  card_image_on: /assets/images/brmb-on.webp
+  card_alt: "Big Red Mute Button bypassed—dimmed with signal live"
+
+hold-it:
+  name: Hold It
+  status: coming-soon
+  price: 34.99
+  currency: EUR
+  marketplace_url: # paste on launch day
+  page: /plugins/hold-it/
+  card_blurb: "Natural decay has been identified as incompatible with project requirements."
+  card_image_off: /assets/images/hold-it-off.webp
+  card_image_on: /assets/images/hold-it-on.webp
+  card_alt: "Dust & Coil Hold It plugin bypassed—blue control dimmed"
