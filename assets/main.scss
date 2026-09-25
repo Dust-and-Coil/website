@@ -98,9 +98,9 @@ h1, h2, h3 {
   color: $grey-color-dark;
 }
 
-// Content links: underlined by default; brighter blue on hover.
+// Content links: underlined by default; dark green on hover for contrast.
 // Minima defaults to underline-only-on-hover — override that.
-$link-hover: #3d8fb5;
+$link-hover: #1f6b3a; // forest green: ~5.3:1 on $background-color (WCAG AA)
 
 a {
   color: $brand-color;
