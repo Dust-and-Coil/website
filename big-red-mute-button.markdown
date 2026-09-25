@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Big Red Mute Button
-permalink: /big-red-mute-button/
+permalink: /plugins/big-red-mute-button/
 plugin: big-red-mute-button
 description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable fade in and out.
 ---

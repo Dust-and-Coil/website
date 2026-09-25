@@ -23,7 +23,7 @@ big-red-mute-button:
   price: 0
   currency: EUR
   marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874
-  page: /big-red-mute-button/
+  page: /plugins/big-red-mute-button/
   card_blurb: "Press the big red button: your signal mutes. Press it again: your signal returns."
   card_image_off: /assets/images/brmb-off.webp
   card_image_on: /assets/images/brmb-on.webp
