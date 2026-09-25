@@ -17,7 +17,7 @@ description: A coming-soon plugin for the Darkglass Anagram. When the note shoul
 
 {% include plugin-tags.html plugin=plugin %}
 
-{% include plugin-art.html plugin=plugin off="/assets/images/hold-it-off.webp" on="/assets/images/hold-it-on.webp" width=364 height=427 alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed" %}
+{% include plugin-art.html plugin=plugin off="/assets/images/hold-it-off.webp" on="/assets/images/hold-it-on.webp" width=400 height=400 alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed" %}
 
 
 ## Why this exists
