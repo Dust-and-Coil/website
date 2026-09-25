@@ -1,19 +1,15 @@
 {%- comment -%}
   Product page block art (off/on state swap). Linked to the Anagram
-  Marketplace only when the plugin is live and has a marketplace_url.
+  Marketplace only when the plugin has a marketplace_url (i.e. is live).
 
     {% include plugin-art.html plugin=plugin off="/assets/images/x-off.webp"
        on="/assets/images/x-on.webp" width=364 height=364 alt="Describe the off state" %}
 {%- endcomment -%}
 {%- assign p = include.plugin -%}
-{%- if p.status == "live" and p.marketplace_url -%}
-  {%- assign linked = true -%}
-{%- else -%}
-  {%- assign linked = false -%}
-{%- endif -%}
-{%- if linked -%}
+{%- assign marketplace_url = p.marketplace_url | strip -%}
+{%- if marketplace_url != "" -%}
 <figure class="product-state">
-  <a href="{{ p.marketplace_url }}" aria-label="{{ p.name }} on the Anagram Marketplace">
+  <a href="{{ marketplace_url }}" aria-label="{{ p.name }} on the Anagram Marketplace">
     <span class="state-swap">
       <img class="state-swap__off" src="{{ include.off | relative_url }}" width="{{ include.width }}" height="{{ include.height }}" alt="" aria-hidden="true">
       <img class="state-swap__on" src="{{ include.on | relative_url }}" width="{{ include.width }}" height="{{ include.height }}" alt="" aria-hidden="true">

@@ -1,19 +1,18 @@
 # Plugin catalog. Product pages, the home page cards, and price labels all
 # read from this file.
 #
-# Launch day (e.g. Hold It):
-#   1. Set `status: live`.
-#   2. Paste the Anagram Marketplace link into `marketplace_url`.
-#   3. Open a PR, check the preview, merge.
-# That moves the home page card from "Coming soon" to "Available now", links
-# the product art to the Marketplace, and swaps the product page's Status /
-# Meanwhile sections for Price / Get it.
+# LAUNCH DAY: paste the Anagram Marketplace link into `marketplace_url`, then merge.
+#
+# A plugin is live (for sale) if and only if `marketplace_url` is filled in;
+# blank means "Coming soon". Going live moves the home page card to
+# "Available now", links the product art to the Marketplace, and swaps the
+# product page's Status / Meanwhile sections for Price / Get it. (The PR
+# preview shows all of this before you merge.)
 #
 # Fields:
-#   status:          coming-soon | live
 #   price:           number; 0 renders as "Free", otherwise e.g. "€34.99"
 #   currency:        EUR (€) or USD ($)
-#   marketplace_url: only used when status is live
+#   marketplace_url: Anagram Marketplace link; blank = coming soon
 #   page:            product page permalink
 #   card_*:          home page card copy and art (shown at 120×120)
 #
@@ -21,7 +20,6 @@
 
 big-red-mute-button:
   name: Big Red Mute Button
-  status: live
   price: 0
   currency: EUR
   marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874
@@ -33,7 +31,6 @@ big-red-mute-button:
 
 hold-it:
   name: Hold It
-  status: coming-soon
   price: 34.99
   currency: EUR
   marketplace_url: # paste on launch day

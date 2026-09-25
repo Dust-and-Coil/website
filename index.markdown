@@ -2,8 +2,17 @@
 layout: default
 ---
 
-{%- assign live_plugins = site.data.plugins | where: "status", "live" -%}
-{%- assign soon_plugins = site.data.plugins | where: "status", "coming-soon" -%}
+{%- comment -%} A plugin is live iff its marketplace_url is filled in (see _data/plugins.yml). {%- endcomment -%}
+{%- assign live_plugins = "" | split: "" -%}
+{%- assign soon_plugins = "" | split: "" -%}
+{%- for entry in site.data.plugins -%}
+  {%- assign url = entry[1].marketplace_url | strip -%}
+  {%- if url == "" -%}
+    {%- assign soon_plugins = soon_plugins | push: entry[1] -%}
+  {%- else -%}
+    {%- assign live_plugins = live_plugins | push: entry[1] -%}
+  {%- endif -%}
+{%- endfor -%}
 <div class="feature-row{% if live_plugins.size == 0 or soon_plugins.size == 0 %} feature-row--single{% endif %}">
 {%- if live_plugins.size > 0 %}
   <div class="feature-row__col">

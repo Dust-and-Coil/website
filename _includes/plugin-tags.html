@@ -2,7 +2,8 @@
   Product page tags. Usage: {% include plugin-tags.html plugin=plugin %}
 {%- endcomment -%}
 {%- assign p = include.plugin -%}
-{%- if p.status == "live" -%}
+{%- assign marketplace_url = p.marketplace_url | strip -%}
+{%- if marketplace_url != "" -%}
 <span class="tag tag--red">{% include plugin-price.html plugin=p %}</span>
 {%- else -%}
 <span class="tag">Coming soon</span>
