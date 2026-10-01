@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+{%- assign marketplace_url = site.data.plugins[page.plugin].marketplace_url | strip -%}
 {{ content }}
+
+{% if marketplace_url != "" -%}
+{% include plugin-releases.html key=page.plugin part="line" %}
+{%- endif %}
 
 {% include plugin-releases.html key=page.plugin %}

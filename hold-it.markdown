@@ -46,7 +46,6 @@ Hold It is for the moment when the note should keep going and the instrument has
 [Available now in the Anagram Marketplace]({{ marketplace_url }}). Add it to your
 library and install it on the pedal.
 
-{% include plugin-releases.html key=page.plugin part="line" %}
 
 {% else %}
 ## Status

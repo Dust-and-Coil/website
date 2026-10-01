@@ -50,4 +50,3 @@ and back in.
 [Available now in the Utilities section]({{ plugin.marketplace_url }}) of the Anagram Marketplace. Add it to your
 library and install it on the pedal.
 
-{% include plugin-releases.html key=page.plugin part="line" %}
