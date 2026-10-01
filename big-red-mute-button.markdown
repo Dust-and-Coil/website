@@ -19,26 +19,30 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 
 {% include plugin-art.html plugin=plugin off="/assets/images/brmb-off.webp" on="/assets/images/brmb-on.webp" width=400 height=400 alt="Big Red Mute Button bypassed—dimmed with signal live" %}
 
+## What this is
 
-## Why this exists
+An immediate, simple, dedicated mute. Assign it to the control you already use: a stomp footswitch, MIDI controller, or anything else available.
 
-Several people in the Anagram Facebook group said they wished it had a mute. 
-Strictly speaking, it does: long-press the left footswitch to open the tuner, 
-which mutes by default.
-
-That answers the literal feature request while missing the UX problem. The same
-footswitch normally controls something else in the preset. A long press is a
-different interaction from a stomp. And on stage, “enter another mode which also
-happens to mute” is not equivalent to “stop my signal now.”
-
-Some of those users were told that triggering the tuner is not difficult. It
-isn't. That was never the point.
+The only option, an adjustable Fade, lets you choose from an immediate cutoff to a smooth fade out and back in.
 
 
-## The one control
+## Key Features
 
-**Fade** sets the transition time, from an immediate cutoff to a smooth fade out
-and back in. 
+**A BIG RED BUTTON:** Considerable research indicated that this was the correct size and color.
+
+
+## Silence Re-engineered
+
+At Dust & Coil Audio Laboratories, **we refuse to treat silence as the mere absence of sound**.
+
+The Button features our **proprietary Vacuum Tube Silence™ technology**, producing a **warm nothingness** suitable for stage or studio.
+
+Every mute is digitally hand-calibrated to deliver:
+
+- **Zero-latency silence**
+- **Audiophile-approved nothingness**
+
+Independent testing confirms that when Big Red Mute Button is engaged, **it is extremely difficult to hear**.
 
 
 ## Price
@@ -48,6 +52,4 @@ and back in.
 
 ## Get it
 
-[Available now in the Utilities section]({{ plugin.marketplace_url }}) of the Anagram Marketplace. Add it to your
-library and install it on the pedal.
-
+[In the Utilities section]({{ plugin.marketplace_url }}) of the Anagram Marketplace.
