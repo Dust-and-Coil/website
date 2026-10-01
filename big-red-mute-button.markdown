@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: plugin
 title: Big Red Mute Button
 permalink: /plugins/big-red-mute-button/
 plugin: big-red-mute-button
@@ -13,6 +13,7 @@ description: A free dedicated-mute plugin for the Darkglass Anagram. Adjustable 
 # Big Red Mute Button
 
 <p class="lede"><strong>Audiophile-approved nothingness</strong></p>
+
 
 {% include plugin-tags.html plugin=plugin %}
 
@@ -49,3 +50,4 @@ and back in.
 
 [Available now in the Utilities section]({{ plugin.marketplace_url }}) of the Anagram Marketplace. Add it to your
 library and install it on the pedal.
+

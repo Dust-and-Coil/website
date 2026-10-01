@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{%- assign marketplace_url = site.data.plugins[page.plugin].marketplace_url | strip -%}
+
+{{ content }}
+
+
+{% include plugin-releases.html key=page.plugin %}

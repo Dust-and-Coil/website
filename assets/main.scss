@@ -584,3 +584,35 @@ blockquote {
   margin: $spacing-unit auto;
   max-width: 540px;
 }
+
+// Version line near Get it, and the release notes section at the foot of
+// plugin pages (see _includes/plugin-releases.html).
+.release-line {
+  font-size: 14px;
+  color: $grey-color;
+}
+
+.release-notes {
+  margin-top: $spacing-unit * 1.5;
+  padding-top: $spacing-unit;
+  border-top: 1px solid $rule;
+}
+
+.release {
+  margin-bottom: 18px;
+
+  ul { margin-bottom: 0; }
+}
+
+.release__heading {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  time {
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $grey-color;
+  }
+}

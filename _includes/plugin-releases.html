@@ -1,0 +1,25 @@
+{%- comment -%}
+  Reads _data/releases/<key>.yml (newest first). Renders nothing when that file doesn't exist.
+{%- endcomment -%}
+{%- assign releases = site.data.releases[include.key] -%}
+{%- assign date_format = "%b %-d, %Y" -%}
+{%- if releases.size > 0 -%}
+  {%- if include.part == "line" -%}
+    {%- assign current = releases.first %}
+<p class="release-line">Version {{ current.version }} · Released <time datetime="{{ current.date | date: '%Y-%m-%d' }}">{{ current.date | date: date_format }}</time> · <a href="#release-notes">Release notes</a></p>
+  {%- else %}
+<section class="release-notes" id="release-notes" aria-labelledby="release-notes-heading">
+  <h2 id="release-notes-heading">Release notes</h2>
+  {%- for release in releases %}
+  <div class="release" id="{{ release.version | replace: '.', '-' | prepend: 'v' }}">
+    <h3 class="release__heading">Version {{ release.version }} <time datetime="{{ release.date | date: '%Y-%m-%d' }}">{{ release.date | date: date_format }}</time></h3>
+    <ul>
+      {%- for note in release.notes %}
+      <li>{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</section>
+  {%- endif -%}
+{%- endif -%}
