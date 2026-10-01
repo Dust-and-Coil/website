@@ -16,6 +16,8 @@ formspree_id: "xbgrwqgy"
 
 # Build settings
 theme: minima
+sass:
+  quiet_deps: true # minima 2.5's own Sass trips deprecations we can't fix here
 plugins:
   - jekyll-feed
 
