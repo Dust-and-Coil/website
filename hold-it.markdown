@@ -20,13 +20,9 @@ description: A coming-soon plugin for the Darkglass Anagram. When the note shoul
 {% include plugin-art.html plugin=plugin off="/assets/images/hold-it-off.webp" on="/assets/images/hold-it-on.webp" width=400 height=400 alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed" %}
 
 
-## Why this exists
+*Freeze a note or chord beneath whatever you play next.* 
 
-Bass notes end. That is usually correct. Sometimes it is not.
-
-The workarounds are familiar: ride the volume pedal, ride the compressor, re-attack the string and pretend it is the same note, or accept a gap where the arrangement wanted a line. None of those is difficult. That was never the point.
-
-Hold It is for the moment when the note should keep going and the instrument has other plans.
+Hold It gives you infinite sustain for pads, drones, or harmonic beds. It delivers a smooth, natural hold of any bass note or chord played on electric bass, fretless, or upright. We tuned it for both pizzicato and arco, with smooth captures that avoid turning finger noise, bow scratch, or bright transients into an endless buzz.
 
 
 {% if marketplace_url != "" %}
