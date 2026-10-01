@@ -1,11 +1,5 @@
 {%- comment -%}
-  Release notes for a plugin from _data/releases/<key>.yml (newest first).
-  Renders nothing when the plugin has no releases file.
-
-    {% include plugin-releases.html key=page.plugin %}             → "Release notes" section
-    {% include plugin-releases.html key=page.plugin part="line" %} → Version 0.1 · Released Aug 21, 2026 · Release notes
-
-  The plugin layout adds the section; pages place the line near Price / Get it.
+  Reads _data/releases/<key>.yml (newest first). Renders nothing when that file doesn't exist.
 {%- endcomment -%}
 {%- assign releases = site.data.releases[include.key] -%}
 {%- assign date_format = "%b %-d, %Y" -%}
@@ -17,28 +11,14 @@
 <section class="release-notes" id="release-notes" aria-labelledby="release-notes-heading">
   <h2 id="release-notes-heading">Release notes</h2>
   {%- for release in releases %}
-    {%- assign anchor = release.version | replace: ".", "-" | prepend: "v" -%}
-    {%- capture heading -%}
-      Version {{ release.version }} <time datetime="{{ release.date | date: '%Y-%m-%d' }}">{{ release.date | date: date_format }}</time>
-    {%- endcapture -%}
-    {%- capture notes -%}
+  <div class="release" id="{{ release.version | replace: '.', '-' | prepend: 'v' }}">
+    <h3 class="release__heading">Version {{ release.version }} <time datetime="{{ release.date | date: '%Y-%m-%d' }}">{{ release.date | date: date_format }}</time></h3>
     <ul>
       {%- for note in release.notes %}
       <li>{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
       {%- endfor %}
     </ul>
-    {%- endcapture -%}
-    {%- if forloop.first %}
-  <div class="release" id="{{ anchor }}">
-    <h3 class="release__heading">{{ heading }}</h3>
-    {{ notes }}
   </div>
-    {%- else %}
-  <details class="release" id="{{ anchor }}">
-    <summary class="release__heading">{{ heading }}</summary>
-    {{ notes }}
-  </details>
-    {%- endif %}
   {%- endfor %}
 </section>
   {%- endif -%}

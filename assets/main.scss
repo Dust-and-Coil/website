@@ -616,17 +616,3 @@ blockquote {
     color: $grey-color;
   }
 }
-
-details.release {
-  padding: 10px 14px;
-  border: 1px solid $rule;
-  border-radius: 10px;
-  background: $paper;
-
-  summary {
-    margin-bottom: 0;
-    cursor: pointer;
-  }
-
-  &[open] summary { margin-bottom: 8px; }
-}
