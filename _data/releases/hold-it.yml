@@ -1,0 +1,8 @@
+# Release history, newest first. The top entry is the current version.
+# To ship a release, prepend an entry. Quote the version so YAML keeps it a
+# string ("0.10" stays "0.10"). Notes are Markdown, one list item each.
+
+- version: "1.2"
+  date: 2026-10-02
+  notes:
+    - First release.
