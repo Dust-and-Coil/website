@@ -24,7 +24,7 @@ big-red-mute-button:
   currency: EUR
   marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874
   page: /plugins/big-red-mute-button/
-  card_blurb: "Simple and reliable mute block."
+  card_blurb: "Simple and reliable mute."
   card_image_off: /assets/images/brmb-off.webp
   card_image_on: /assets/images/brmb-on.webp
   card_alt: "Big Red Mute Button bypassed—dimmed with signal live"
