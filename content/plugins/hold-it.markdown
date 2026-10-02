@@ -25,32 +25,7 @@ description: Freeze a note or chord beneath whatever you play next.
 Hold It gives you infinite sustain for pads, drones, or harmonic beds. It delivers a smooth, natural hold of any bass note or chord played on electric bass, fretless, or upright. We tuned it for both pizzicato and arco, with smooth captures that avoid turning finger noise, bow scratch, or bright transients into an endless buzz.
 
 
-{% if marketplace_url != "" %}
-{% comment %}
-  TODO(launch): add a "## The controls" section here, like the BRMB page's
-  "The one control". Copy to come from the plugin team — not rendered until written.
-{% endcomment %}
-
-## Price
-
-{% include plugin-price.html plugin=plugin %}
-
-{% include plugin-price.html plugin=plugin part="note" %}
 
 ## Get it
 
 [Available now in the Anagram Marketplace]({{ marketplace_url }}).
-
-
-{% else %}
-## Status
-
-Coming soon. Controls, pricing, and the Anagram Marketplace listing will land here when the plugin does.
-
-
-## Meanwhile
-
-Ideas, bug reports from the field, and “please make it do X” notes are welcome on the
-[contact page]({{ '/contact/' | relative_url }}).
-
-{% endif %}
