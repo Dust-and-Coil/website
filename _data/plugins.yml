@@ -33,9 +33,9 @@ hold-it:
   name: Hold It
   price: 34.99
   currency: EUR
-  marketplace_url: # paste on launch day
+  marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16171974787450
   page: /plugins/hold-it/
-  card_blurb: "Natural decay has been identified as incompatible with project requirements."
+  card_blurb: "Freeze a note or chord beneath whatever you play next."
   card_image_off: /assets/images/hold-it-off.webp
   card_image_on: /assets/images/hold-it-on.webp
   card_alt: "Dust & Coil Hold It plugin bypassed—blue control dimmed"

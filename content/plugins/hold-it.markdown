@@ -3,9 +3,9 @@ layout: plugin
 title: Hold It
 permalink: /plugins/hold-it/
 plugin: hold-it
-description: A coming-soon plugin for the Darkglass Anagram. When the note should keep going and the instrument has other plans.
+description: Freeze a note or chord beneath whatever you play next.
 ---
-{%- assign plugin = site.data.plugins[page.plugin] -%}
+{%- assign plugin          = site.data.plugins[page.plugin] -%}
 {%- assign marketplace_url = plugin.marketplace_url | strip -%}
 
 <span class="kicker">Plugin for the Darkglass Anagram</span>
@@ -13,7 +13,7 @@ description: A coming-soon plugin for the Darkglass Anagram. When the note shoul
 
 # Hold It
 
-<p class="lede"><strong>Natural decay has been identified as incompatible with project requirements.</strong></p>
+<p class="lede"><strong>Freeze effect for infinite sustain.</strong></p>
 
 {% include plugin-tags.html plugin=plugin %}
 
@@ -39,8 +39,7 @@ Hold It gives you infinite sustain for pads, drones, or harmonic beds. It delive
 
 ## Get it
 
-[Available now in the Anagram Marketplace]({{ marketplace_url }}). Add it to your
-library and install it on the pedal.
+[Available now in the Anagram Marketplace]({{ marketplace_url }}).
 
 
 {% else %}
