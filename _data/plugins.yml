@@ -24,7 +24,7 @@ big-red-mute-button:
   currency: EUR
   marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16160722026874
   page: /plugins/big-red-mute-button/
-  card_blurb: "Press the big red button: your signal mutes. Press it again: your signal returns."
+  card_blurb: "Simple and reliable mute block."
   card_image_off: /assets/images/brmb-off.webp
   card_image_on: /assets/images/brmb-on.webp
   card_alt: "Big Red Mute Button bypassed—dimmed with signal live"
@@ -35,7 +35,7 @@ hold-it:
   currency: EUR
   marketplace_url: https://marketplace.anagram.shop/learn-more?id=gid://shopify/Product/16171974787450
   page: /plugins/hold-it/
-  card_blurb: "Freeze a note or chord beneath whatever you play next."
+  card_blurb: "Infinite sustain freeze effect."
   card_image_off: /assets/images/hold-it-off.webp
   card_image_on: /assets/images/hold-it-on.webp
   card_alt: "Dust & Coil Hold It plugin bypassed—blue control dimmed"
