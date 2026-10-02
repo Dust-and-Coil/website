@@ -19,38 +19,20 @@ description: Freeze a note or chord beneath whatever you play next.
 
 {% include plugin-art.html plugin=plugin off="/assets/images/hold-it-off.webp" on="/assets/images/hold-it-on.webp" width=400 height=400 alt="Dust &amp; Coil Hold It plugin bypassed—blue control dimmed" %}
 
-
 *Freeze a note or chord beneath whatever you play next.* 
 
 Hold It gives you infinite sustain for pads, drones, or harmonic beds. It delivers a smooth, natural hold of any bass note or chord played on electric bass, fretless, or upright. We tuned it for both pizzicato and arco, with smooth captures that avoid turning finger noise, bow scratch, or bright transients into an endless buzz.
 
-
-{% if marketplace_url != "" %}
-{% comment %}
-  TODO(launch): add a "## The controls" section here, like the BRMB page's
-  "The one control". Copy to come from the plugin team — not rendered until written.
-{% endcomment %}
-
-## Price
-
-{% include plugin-price.html plugin=plugin %}
-
-{% include plugin-price.html plugin=plugin part="note" %}
 
 ## Get it
 
 [Available now in the Anagram Marketplace]({{ marketplace_url }}).
 
 
-{% else %}
-## Status
+## Demo videos and engineering notes
 
-Coming soon. Controls, pricing, and the Anagram Marketplace listing will land here when the plugin does.
+**Oct. 2, 2026 09:17 -** Welcome, everyone who has landed here. I just finished launching Hold It into the Marketplace and am now putting videos and notes online.
 
+Please check back later today. Thanks for your patience!
 
-## Meanwhile
-
-Ideas, bug reports from the field, and “please make it do X” notes are welcome on the
-[contact page]({{ '/contact/' | relative_url }}).
-
-{% endif %}
+Robert

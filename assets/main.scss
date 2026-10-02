@@ -37,6 +37,11 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
 .site-header {
   border-top: none;
   border-bottom: 1px solid $rule;
