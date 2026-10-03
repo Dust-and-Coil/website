@@ -33,6 +33,6 @@ Hold It gives you infinite sustain for pads, drones, or harmonic beds. It delive
 
 **Oct. 2, 2026 09:17 -** Welcome, everyone who has landed here. I just finished launching Hold It into the Marketplace and am now putting videos and notes online.
 
-Please check back later today. Thanks for your patience!
+Please check back later today. Thanks for your support!
 
 Robert
